@@ -32,6 +32,7 @@ class ResponseJson
      */
     public function render()
     {
+        header('Access-Control-Allow-Origin: *');
         header('Content-Type: application/json');
         return json_encode($this->data);
     }
